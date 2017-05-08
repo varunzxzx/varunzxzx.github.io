@@ -1,0 +1,376 @@
+footer a:hover{
+    color: aqua;
+    text-decoration: none;
+}
+
+footer a{
+    color: aqua;
+}
+
+footer p{
+    margin-top: 0.4%;
+    margin-bottom: 0;
+    font-size: 16px;
+    padding-bottom: 0.1%;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+}
+
+footer {
+    background: #282E34;
+    color: azure;
+    font-family: 'Roboto Condensed';
+}
+
+#contact .parallax .content .row p{
+    margin-top: 1px;
+    font-family: 'Merriweather';
+    font-size: 16px;
+}
+
+#contact .parallax .content .row {
+    width: 80%;
+    margin: 18px auto 0 auto;
+}
+
+#contact hr {
+    margin-top: 1px;
+}
+
+#contact p {
+    font-family: 'Merriweather';
+    font-size: 20px;
+    width: 60%;
+    margin: 4% auto 0 auto;
+}
+
+#contact h1 {
+    font-size: 45px;
+    text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+                 0 8px 13px rgba(0,0,0,0.1),
+                 0 18px 23px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}
+
+#contact .parallax .content{
+    margin-top: 8%;
+    margin-bottom: 10%;
+    font-family: 'Oswald';
+}
+
+div#contact .row.parallax {
+    text-align: center;
+    background: url("../img/contact.jpg");
+    color: #282E34;
+}
+
+#project a.btn {
+    font-family: 'Open Sans';
+    font-size: 100%;
+    border-radius: 300px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 1%;
+    background: #162035;
+    color: greenyellow;
+    transition: all .2s ease-in-out;
+}
+
+#project a.btn:hover {
+    background: greenyellow;
+    color: #162035;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .35s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration: none !important;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.thumbnail .text:hover {
+    background: greenyellow;
+    color: #162035;
+}
+
+.thumbnail:hover .image {
+  opacity: 0.3;
+}
+
+.thumbnail:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  transition: .35s ease-in-out;
+  background-color: #162035;
+  color: aquamarine;
+  font-size: 20px;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed';
+  letter-spacing: 1px;
+}
+
+.thumbnail {
+    margin-top: 4%;
+}
+
+.thumbnail img {
+    height: 250px;
+    transition: all 0.35s ease-in-out;
+}
+
+div#project .row .col-lg-12  h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Oswald';
+    text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+                 0 8px 13px rgba(0,0,0,0.1),
+                 0 18px 23px rgba(0,0,0,0.1);
+    letter-spacing: 1.5px;
+}
+
+
+div#project .row .content {
+    margin-bottom: 1%;
+}
+
+div#project{
+    background: #282E34;
+    text-align: center;
+    color: greenyellow;
+}
+
+
+.upd {
+    margin-top: -9px !important;
+    width: 15em !important;
+}
+
+div#skill .row .col-lg-12 .content div div div p {
+   font-size: 0.9em;
+    color: #EAFFE8;
+    font-family: 'Open Sans' !important;
+}
+
+div#skill .row .col-lg-12 .content div div div h3 {
+    font-family: 'Oswald';
+    letter-spacing: 0.9px;
+    text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+                 0 8px 13px rgba(0,0,0,0.1),
+                 0 18px 23px rgba(0,0,0,0.1);
+}
+
+div#skill .row .col-lg-12 .content div{
+    margin-top: 1.5%;
+    font-size: 20px;
+    color: white;
+}
+
+div#skill .row .col-lg-12 .content h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    color: white;
+    font-family: 'Oswald';
+    text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+                 0 8px 13px rgba(0,0,0,0.1),
+                 0 18px 23px rgba(0,0,0,0.1);
+    letter-spacing: 4px;
+}
+
+div#skill .row .col-lg-12 .content {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+div#skill .row.parallax{
+    background-image: url("../img/skill.jpg");
+    text-align: center;
+}
+
+div#about .row .col-lg-12 .content p{
+    width: 50%;
+    margin: 2% auto 0 auto;
+    font-family: 'Roboto';
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+
+div#about .row .col-lg-12 .content h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Oswald';
+    text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+                 0 8px 13px rgba(0,0,0,0.1),
+                 0 18px 23px rgba(0,0,0,0.1);
+    letter-spacing: 1.5px;
+}
+
+hr.style17.pro:after{
+    background: #282E34 !important;
+}
+
+hr.style17 {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+    width:20%;
+    margin-top: 2.5rem;
+}
+hr.style17:after {
+	content: '\f121';
+	display: inline-block;
+    font-family: FontAwesome;
+	position: relative;
+	top: -18px;
+	padding: 0 10px;
+	background: #FFDF24;
+	color: #8c8b8b;
+	font-size: 24px;
+}
+
+div#about .row .col-lg-12 .content{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+div#about{
+    background: #FFDF24;
+    text-align: center;
+}
+
+
+
+hr.style {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    width: 35rem;
+    margin-top: 5rem;
+}
+
+.ico a i {
+    margin: 1.2em 4px 0 4px;
+    font-size: 40px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.ico a i:hover {
+    color: greenyellow;
+}
+div#main .row .col-lg-12 .content p{
+    font-family: 'Oswald';
+    color: white;
+    letter-spacing: 1px;
+    font-size: 18px;
+    width: 32rem;
+    margin:auto;
+    padding: 2px;
+    background: black;
+    border-radius: 5px 5px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 3px rgba(0,0,0,0.6),
+                 0 8px 13px rgba(0,0,0,0.3),
+                 0 18px 23px rgba(0,0,0,0.2);
+}
+
+div#main .row .col-lg-12 .content h1{
+    font-family: 'Oswald';
+    color: white;
+    font-size: 85px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 3px rgba(0,0,0,0.6),
+                 0 8px 13px rgba(0,0,0,0.3),
+                 0 18px 23px rgba(0,0,0,0.2);
+}
+
+div#main{
+    margin-top: 50px;
+    background-image: url("../img/main.jpg");
+    text-align: center;
+}
+
+div#main .row .col-lg-12 .content{
+    margin-top: 14%;
+}
+
+body, html {
+    height: 100%;
+}
+
+.parallax { 
+    opacity: 0.9;
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    padding-top: 1.5rem !important;
+    padding-right: 1.5em !important;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-size: 1.13em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+                 0 8px 13px rgba(0,0,0,0.1),
+                 0 18px 23px rgba(0,0,0,0.1);
+    padding: 10px;
+    transition: all 0.35s ease-in-out;
+}
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
+    background-color: #162035;
+    box-shadow: 0 4px 3px rgba(255,255,255,0.4),
+                 0 8px 13px rgba(255,255,255,0.1),
+                 0 18px 23px rgba(255,255,255,0.1);
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:active{
+    color: greenyellow;
+}
+
+
+.navbar-brand {
+  padding: 0;
+}
+.navbar-brand>img {
+  height: 80%;
+  padding: 15px;
+  width: auto;
+}
+
+.brand-centered {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.brand-centered .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle {
+    z-index: 1;
+}
