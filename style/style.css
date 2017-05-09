@@ -46,6 +46,7 @@ footer {
 
 #contact h1 {
     font-size: 45px;
+    margin-bottom: 1%;
     text-shadow: 0 4px 3px rgba(0,0,0,0.4),
                  0 8px 13px rgba(0,0,0,0.1),
                  0 18px 23px rgba(0,0,0,0.1);
@@ -324,7 +325,7 @@ body, html {
 
 .navbar-inverse .navbar-nav > li > a{
     padding-top: 1.5rem !important;
-    padding-right: 1.5em !important;
+    padding-right: 0;
     color: white;
     font-family: 'Roboto Condensed';
     font-size: 1.13em;
@@ -333,8 +334,8 @@ body, html {
     text-shadow: 0 4px 3px rgba(0,0,0,0.4),
                  0 8px 13px rgba(0,0,0,0.1),
                  0 18px 23px rgba(0,0,0,0.1);
-    padding: 10px;
     transition: all 0.35s ease-in-out;
+    margin-right: 2em;
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
