@@ -273,6 +273,8 @@ hr.style {
     font-size: 40px;
     color: white;
     transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
 }
 
 .ico a i:hover {
