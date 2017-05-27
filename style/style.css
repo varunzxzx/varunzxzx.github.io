@@ -75,6 +75,8 @@ div#contact .row.parallax {
     background: #162035;
     color: greenyellow;
     transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
 }
 
 #project a.btn:hover {
@@ -90,6 +92,8 @@ div#contact .row.parallax {
 
 .middle {
   transition: .35s ease-in-out;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -114,6 +118,8 @@ div#contact .row.parallax {
 
 .text {
   transition: .35s ease-in-out;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
   background-color: #162035;
   color: aquamarine;
   font-size: 20px;
@@ -130,6 +136,8 @@ div#contact .row.parallax {
 .thumbnail img {
     height: 250px;
     transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
 }
 
 div#project .row .col-lg-12  h1{
@@ -335,6 +343,8 @@ body, html {
                  0 8px 13px rgba(0,0,0,0.1),
                  0 18px 23px rgba(0,0,0,0.1);
     transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
     margin-right: 2em;
 }
 
