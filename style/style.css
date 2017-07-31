@@ -1,3 +1,12 @@
+@media (max-width: 768px) {
+  .col-sm-6.col-lg-3.text-center {
+    margin-top: 5%!important;
+  }
+  div#skill .row .col-lg-12 .content div div div h3 {
+    margin-top: 0;
+  }
+}
+
 footer a:hover{
     color: aqua;
     text-decoration: none;
