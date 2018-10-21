@@ -42,10 +42,10 @@
 
     <script>
         $(function () {
-            $('body').on('click', '.navbar-inverse .navbar-nav > li > a,.navbar-brand', function (event) {
+            $('body').on('click', '.navbar-inverse .navbar-nav > li > a,.navbar-brand', function (e) {
                 var $anchor = $(this);
                 $('html, body').stop().animate({ scrollTop: $($anchor.attr('href')).offset().top - 50 }, 1500, 'easeInOutExpo');
-                event.preventDefault();
+                e.preventDefault();
             });
         });
     </script>
