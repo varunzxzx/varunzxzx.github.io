@@ -70,7 +70,7 @@ footer {
 
 div#contact .row.parallax {
     text-align: center;
-    background: url("../img/contact.jpg");
+    background: url("../img/contact.webp");
     color: #282E34;
 }
 
@@ -213,7 +213,7 @@ div#skill .row .col-lg-12 .content {
 }
 
 div#skill .row.parallax{
-    background-image: url("../img/skill.jpg");
+    background-image: url("../img/skill.webp");
     text-align: center;
 }
 
@@ -319,7 +319,7 @@ div#main .row .col-lg-12 .content h1{
 
 div#main{
     margin-top: 50px;
-    background-image: url("../img/main.jpg");
+    background-image: url("../img/main.webp");
     text-align: center;
 }
 
