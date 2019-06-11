@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Varun M(varunzxzx) | Web Developer',
+  siteTitle: 'Varun M (varunzxzx) | Web Developer',
   siteDescription:
     'I\'m a self taught web developer based in New Delhi, India specializing in building exceptional, high-quality websites and applications.',
   siteKeywords:
