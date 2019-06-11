@@ -40,7 +40,9 @@ const SkipToContent = styled.a`
 `;
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(window.location.pathname === '/');
+  const [isLoading, setIsLoading] = useState(
+    typeof window !== 'undefined' && window.location.pathname === '/',
+  );
 
   return (
     <StaticQuery
