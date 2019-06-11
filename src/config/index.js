@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Varun M | Web Developer',
   siteDescription:
-    'I\'m a self taught developer based in New Delhi, India specializing in building exceptional, high-quality websites and applications.',
+    'I\'m a self taught web developer based in New Delhi, India specializing in building exceptional, high-quality websites and applications.',
   siteKeywords:
     'Varun M, Varun, varunzxzx, software engineer, front-end engineer, web developer, javascript, open source, react, express, nodejs, graphql, pwa',
   siteUrl: 'https://varunzxzx.github.io',
@@ -37,6 +37,10 @@ module.exports = {
     {
       name: 'Work',
       url: '#projects',
+    },
+    {
+      name: 'Blog',
+      url: '#blog',
     },
     {
       name: 'Contact',
