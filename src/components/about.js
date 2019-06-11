@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import sr from '@utils/sr';
-import { srConfig, github } from '@config';
+import { srConfig } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -60,7 +60,7 @@ const Avatar = styled(Img)`
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
 `;
-const AvatarContainer = styled.a`
+const AvatarContainer = styled.div`
   ${mixins.boxShadow};
   width: 100%;
   position: relative;
@@ -122,7 +122,7 @@ const About = ({ data }) => {
           </SkillsContainer>
         </ContentContainer>
         <PicContainer>
-          <AvatarContainer href={github}>
+          <AvatarContainer>
             <Avatar fluid={avatar.childImageSharp.fluid} alt="Avatar" />
           </AvatarContainer>
         </PicContainer>
