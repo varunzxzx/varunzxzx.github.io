@@ -54,7 +54,7 @@ The AST representation of the above program looks like this:
         - ReturnStatement
           - argument
             - BinaryExpression
-              - operator: \*
+              - operator: *
               - left
                 - Identifier
                   - name: n
@@ -355,7 +355,8 @@ TemplateLiteral(path) {
 ```
 
 > Note: I am not going to describe all the properties of the nodes. [AST Explorer](http://astexplorer.net) is the best 😄
-> The above code gets all the string parts(quasis) and store it to the variable **staticStyle**. I’ve only showed how to get the variables but we are not using it yet. Now, if you notice, I am getting the value from **expressions** when the quasis tail(property of that node) is falsy. Because the tail quasis represents the end of the string(there is no variable after it).
+
+The above code gets all the string parts(quasis) and store it to the variable **staticStyle**. I’ve only showed how to get the variables but we are not using it yet. Now, if you notice, I am getting the value from **expressions** when the quasis tail(property of that node) is falsy. Because the tail quasis represents the end of the string(there is no variable after it).
 
 Now, we need to do two things to handle dynamic values.
 
