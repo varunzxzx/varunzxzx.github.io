@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { navLinks } from '@config';
+import { navLinks, siteUrl } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
 const { colors, fontSizes, fonts } = theme;
+import { isSSR } from '@utils/sr';
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -69,6 +70,11 @@ const NavLink = styled(AnchorLink)`
   padding: 3px 20px 20px;
   width: 100%;
 `;
+const NavLinkWithoutAnchorLink = styled.a`
+  ${mixins.link};
+  padding: 3px 20px 20px;
+  width: 100%;
+`;
 const ResumeLink = styled.a`
   ${mixins.bigButton};
   padding: 18px 50px;
@@ -99,7 +105,13 @@ const Menu = ({ menuOpen, toggleMenu }) => {
             {navLinks &&
               navLinks.map(({ url, name }, i) => (
                 <NavListItem key={i}>
-                  <NavLink href={url}>{name}</NavLink>
+                  {!isSSR && window.location.pathname !== '/' ? (
+                    <NavLinkWithoutAnchorLink href={`${siteUrl}/${url}`}>
+                      {name}
+                    </NavLinkWithoutAnchorLink>
+                  ) : (
+                    <NavLink href={url}>{name}</NavLink>
+                  )}
                 </NavListItem>
               ))}
           </NavList>
