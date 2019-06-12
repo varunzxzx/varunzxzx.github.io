@@ -6,3 +6,4 @@
 
 // You can delete this file if you're not using it
 require('./static/night-owl/styles.min.css');
+require('./static/night-owl/highlight.css');

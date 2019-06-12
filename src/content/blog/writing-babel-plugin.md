@@ -115,7 +115,7 @@ As you already know now, that Babel plugins operates in the **transform** stage.
 
 Let’s start writing our babel plugin. So, there is a tiny css-in-js library called [use-css](https://github.com/siddharthkp/use-css#readme) by [siddharthkp](https://twitter.com/siddharthkp). Here is a small demo of it:
 
-```javascript
+```jsx
 import useCSS from 'use-css';
 
 function Oopsy(props) {
@@ -172,7 +172,7 @@ Now, the Identifier method will be called every time babel visits a node of type
 
 For our plugin we need to get all the “useCSS” call because then we’ll be able to get all the styles, and put it in a static style. Then, we will replace the function call with a class name and remove all imports. So the following code
 
-```javascript
+```jsx
 import useCSS from 'use-css';
 
 function Oopsy(props) {
@@ -192,7 +192,7 @@ render(<Oopsy color="green" />);
 
 will be transformed to
 
-```javascript
+```jsx
 function Oopsy(props) {
   const className = “4vg68s”
 
@@ -204,7 +204,7 @@ render(<Oopsy color="green" />)
 
 and all the styles will be moved to bundle.css. For the dynamic values, we’ll be using css variables(magic spell). For example:
 
-```javascript
+```jsx
 import useCSS from 'use-css';
 
 function Oopsy(props) {
@@ -225,8 +225,8 @@ render(<Oopsy color="green" />);
 
 will be transformed to:
 
-```javascript
-//js
+```jsx
+/* js */
 function Oopsy(props) {
   const className = “4vg68s”
 
@@ -238,8 +238,9 @@ function Oopsy(props) {
 }
 
 render(<Oopsy color="green" />)
-
-//bundle.css
+```
+```css
+/* bundle.css */
 .4vg68s{
 font-size:21px;
 font-style:italic;
@@ -468,10 +469,11 @@ export default function(babel) {
         } else {
           staticStyle = quasis[0].value.cooked;
         }
-
+	// highlight-start
         writeFile("bundle.css", staticStyle, function(err) {
           if (err) throw err;
         });
+	// highlight-end
     }
   };
 }
@@ -490,12 +492,14 @@ export default function(babel) {
         } else {
           staticStyle = quasis[0].value.cooked;
         }
+	// highlight-start
         // convert string literal into string
         const finalStaticStyle = staticStyle.replace(/\r?\n|\r|\s/g, "");
 
         className = getClassName(finalStaticStyle);
 
         const rawCSS = stylis("." + className, finalStaticStyle);
+	// highlight-end
 
         writeFile("bundle.css", rawCSS, function(err) {
           if (err) throw err;
@@ -504,6 +508,7 @@ export default function(babel) {
   };
 }
 ```
+
 
 Now our babel plugins saves all the css to a static file while managing the dynamic styles as well. So, if we have done all this job during the build time. Why to repeat pre-processing, hashing etc. in the runtime. We need to remove all the useCSS calls and replace it with the classname which we’ve generated.
 To do this I’ll simply use the helper method provided by babel. You can find all the babel helper functions [here](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md).
