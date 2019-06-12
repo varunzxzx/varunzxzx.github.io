@@ -39,7 +39,7 @@ const SkipToContent = styled.a`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showMeta }) => {
   // const [isLoading, setIsLoading] = useState(
   //   typeof window !== 'undefined' && window.location.pathname === '/',
   // );
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
       `}
       render={({ site }) => (
         <div id="root">
-          <Head metadata={site.siteMetadata} />
+          <Head metadata={site.siteMetadata} showMeta={showMeta} />
 
           <GlobalStyle />
 
@@ -86,6 +86,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  showMeta: PropTypes.bool.isRequired,
 };
 
 export default Layout;

@@ -11,7 +11,7 @@ const MainContainer = styled(Main)`
 `;
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Layout showMeta={true}>
     <MainContainer id="content">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
