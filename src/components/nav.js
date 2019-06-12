@@ -10,6 +10,7 @@ import { IconLogo } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
 const { colors, fontSizes, fonts } = theme;
+import { isSSR } from '@utils/sr';
 
 const NavContainer = styled.header`
   ${mixins.flexBetween};

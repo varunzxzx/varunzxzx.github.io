@@ -1,6 +1,7 @@
 import path from 'path';
 import React from 'react';
 import Img from 'gatsby-image';
+import { siteUrl } from '@config';
 import { Link, graphql } from 'gatsby';
 import Disqus from 'disqus-react';
 import Helmet from 'react-helmet';
@@ -239,11 +240,8 @@ class BlogPostTemplate extends React.Component {
     const pageContext = this.props.pageContext;
     const { previous, next } = pageContext;
 
-    const imgUrl = `https://${path.join(
-      'varunzxzx.github.io/',
-      post.frontmatter.featuredImg.childImageSharp.fluid.src,
-    )}`;
-    const pageUrl = `https://${path.join('varunzxzx.gituhb.io/', post.frontmatter.slug, '/')}`;
+    const imgUrl = `${siteUrl}${post.frontmatter.featuredImg.childImageSharp.fluid.src}`;
+    const pageUrl = `${siteUrl}${post.frontmatter.slug}/`;
     const pageTitle = `${post.frontmatter.title} | ${site.siteMetadata.title}`;
     const pageDescription = post.excerpt;
 
@@ -279,7 +277,9 @@ class BlogPostTemplate extends React.Component {
                   {post.timeToRead} Min{post.timeToRead > 1 ? 's' : ''} Read
                 </span>
                 {(post.frontmatter.tags || []).map(tag => (
-                  <span className="tag">#{tag}</span>
+                  <span key={tag} className="tag">
+                    #{tag}
+                  </span>
                 ))}
               </Meta>
             </div>
@@ -305,7 +305,9 @@ class BlogPostTemplate extends React.Component {
                       {previous.timeToRead} {previous.timeToRead > 1 ? 'Mins' : 'Min'} Read
                     </span>
                     {(previous.frontmatter.tags || []).map(tag => (
-                      <span className="tag">#{tag}</span>
+                      <span key={tag} className="tag">
+                        #{tag}
+                      </span>
                     ))}
                   </Meta>
                 </Link>
@@ -324,7 +326,9 @@ class BlogPostTemplate extends React.Component {
                       {next.timeToRead} {next.timeToRead > 1 ? 'Mins' : 'Min'} Read
                     </span>
                     {(next.frontmatter.tags || []).map(tag => (
-                      <span className="tag">#{tag}</span>
+                      <span key={tag} className="tag">
+                        #{tag}
+                      </span>
                     ))}
                   </Meta>
                 </Link>
@@ -338,7 +342,7 @@ class BlogPostTemplate extends React.Component {
               <Disqus.DiscussionEmbed
                 shortname={'varunzxzx'}
                 config={{
-                  url: `https://varunzxzx.github.io${post.frontmatter.slug}`,
+                  url: `${siteUrl}${post.frontmatter.slug}`,
                   identifier: pageContext.filePath,
                   title: post.frontmatter.title,
                 }}
