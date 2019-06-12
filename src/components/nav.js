@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'gatsby';
 import { throttle } from '@utils';
-import { navLinks, navHeight } from '@config';
+import { navLinks, navHeight, siteUrl } from '@config';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
 import styled from 'styled-components';
@@ -152,6 +152,9 @@ const NavListItem = styled.li`
 const NavLink = styled(AnchorLink)`
   padding: 12px 10px;
 `;
+const NavLinkWithoutAnchorLink = styled.a`
+  padding: 12px 10px;
+`;
 const ResumeLink = styled.a`
   ${mixins.smallButton};
   margin-left: 10px;
@@ -267,7 +270,13 @@ class Nav extends Component {
                   navLinks.map(({ url, name }, i) => (
                     <CSSTransition key={i} classNames="fadedown" timeout={3000}>
                       <NavListItem key={i} style={{ transitionDelay: `${i * 100}ms` }}>
-                        <NavLink href={url}>{name}</NavLink>
+                        {!isSSR && window.location.pathname !== '/' ? (
+                          <NavLinkWithoutAnchorLink href={`${siteUrl}/${url}`}>
+                            {name}
+                          </NavLinkWithoutAnchorLink>
+                        ) : (
+                          <NavLink href={url}>{name}</NavLink>
+                        )}
                       </NavListItem>
                     </CSSTransition>
                   ))}

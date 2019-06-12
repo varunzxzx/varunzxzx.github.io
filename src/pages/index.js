@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Layout, Hero, About, Featured, Projects, Contact, BlogPosts } from '@components';
@@ -10,18 +10,34 @@ const MainContainer = styled(Main)`
   counter-reset: section;
 `;
 
-const IndexPage = ({ data }) => (
-  <Layout showMeta={true}>
-    <MainContainer id="content">
-      <Hero data={data.hero.edges} />
-      <About data={data.about.edges} />
-      <Featured data={data.featured.edges} />
-      <Projects data={data.projects.edges} />
-      <BlogPosts data={data.blogPosts.edges} />
-      <Contact data={data.contact.edges} />
-    </MainContainer>
-  </Layout>
-);
+const IndexPage = ({ data }) => {
+  // scroll to the specific section if the site is loaded again
+  useEffect(() => {
+    if (window.location.href.indexOf('#') !== -1) {
+      const url = window.location.href;
+      const id = url.split('#')[1];
+      const element = document.getElementById(id);
+      try {
+        element.scrollIntoView();
+      } catch {
+        // do nothing
+      }
+    }
+  });
+
+  return (
+    <Layout showMeta={true}>
+      <MainContainer id="content">
+        <Hero data={data.hero.edges} />
+        <About data={data.about.edges} />
+        <Featured data={data.featured.edges} />
+        <Projects data={data.projects.edges} />
+        <BlogPosts data={data.blogPosts.edges} />
+        <Contact data={data.contact.edges} />
+      </MainContainer>
+    </Layout>
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
