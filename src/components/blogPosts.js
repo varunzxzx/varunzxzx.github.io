@@ -216,7 +216,8 @@ class BlogPosts extends Component {
   }
 
   componentDidMount() {
-    ScrollReveal().reveal(this.featured, config.srConfig());
+    const title = this.projects;
+    ScrollReveal().reveal(title, config.srConfig());
     this.revealRefs.forEach(ref => ScrollReveal().reveal(ref, config.srConfig()));
   }
 
@@ -232,18 +233,18 @@ class BlogPosts extends Component {
 
     return (
       <BlogPostsContainer id="blog">
-        <BlogPostsTitle innerRef={el => (this.projects = el)}>Latest Posts</BlogPostsTitle>
+        <BlogPostsTitle ref={el => (this.projects = el)}>Latest Posts</BlogPostsTitle>
         <BlogPostsGrid>
           <TransitionGroup className="blog-posts">
             {blogPosts.map(({ node }, i) => (
               <CSSTransition
-                key={i}
+                key={node.frontmatter.slug}
                 classNames="fadeup"
                 timeout={i >= this.GRID_LIMIT ? (i - this.GRID_LIMIT) * 300 : 300}
                 exit={false}>
                 <BlogPost
                   key={i}
-                  innerRef={el => (this.revealRefs[i] = el)}
+                  ref={el => (this.revealRefs[i] = el)}
                   style={{
                     transitionDelay: `${i >= this.GRID_LIMIT ? (i - this.GRID_LIMIT) * 100 : 0}ms`,
                   }}>
@@ -260,7 +261,9 @@ class BlogPosts extends Component {
                           {node.timeToRead} Min{node.timeToRead > 1 ? 's' : ''} Read
                         </span>
                         {(node.frontmatter.tags || []).map(tag => (
-                          <span className="tag">#{tag}</span>
+                          <span key={tag} className="tag">
+                            #{tag}
+                          </span>
                         ))}
                       </Meta>
                     </div>
