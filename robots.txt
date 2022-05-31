@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://varunzxzx.github.io/sitemap.xml
+Sitemap: https://varunzxzx.github.io/sitemap/sitemap-index.xml
 Host: https://varunzxzx.github.io
