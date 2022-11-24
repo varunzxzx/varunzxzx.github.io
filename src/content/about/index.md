@@ -1,6 +1,6 @@
 ---
 title: 'About Me'
-avatar: './me.jpg'
+avatar: './profile.jpg'
 skills:
   - JavaScript (ES6+)
   - HTML & (S)CSS
