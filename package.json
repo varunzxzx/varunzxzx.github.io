@@ -15,7 +15,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "npm run develop --openssl-legacy-provider",
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
