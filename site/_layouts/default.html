@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% if page.title %}{{ page.title }} · Varun M{% else %}Varun M · Engineer{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}" />
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Varun M · Engineer{% endif %}" />
+<meta property="og:description" content="{{ page.description | default: site.description }}" />
+<meta name="theme-color" content="#141210" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo:wdth,wght@125,700..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="{{ '/' | relative_url }}" style="text-decoration:none">varun<span class="tld">.dev</span></a>
+    <div class="nav-links">
+      <a href="{{ '/#about' | relative_url }}">about</a>
+      <a href="{{ '/#experience' | relative_url }}">experience</a>
+      <a href="{{ '/blog/' | relative_url }}">writing</a>
+      <a href="{{ '/#contact' | relative_url }}">contact</a>
+    </div>
+  </div>
+</nav>
+
+{{ content }}
+
+<footer class="wrap">
+  <span>© {{ site.time | date: '%Y' }} Varun M · designed & built by hand</span>
+  <span>exit code <span class="ok">0</span></span>
+</footer>
+
+</body>
+</html>

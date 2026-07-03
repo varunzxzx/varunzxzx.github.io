@@ -1,0 +1,19 @@
+title: Varun M
+description: Self-taught full-stack engineer building multi-agent AI systems for healthcare.
+url: https://varunzxzx.github.io
+
+# Keeps old Gatsby URLs working: /blog/<slug>/
+permalink: /blog/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md

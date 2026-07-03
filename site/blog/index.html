@@ -1,0 +1,19 @@
+---
+layout: default
+title: Writing
+description: Notes on JavaScript internals, system design, and AI systems.
+permalink: /blog/
+---
+<section style="border-bottom:none">
+  <div class="wrap">
+    <p class="sec-label">$ ls ~/blog</p>
+    <h2>Writing</h2>
+    {% for post in site.posts %}
+    <div class="post">
+      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.tags and post.tags.size > 0 %}<span class="rt">{% for t in post.tags %}#{{ t }} {% endfor %}</span>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
