@@ -5,9 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{% if page.title %}{{ page.title }} · Varun M{% else %}Varun M · Engineer{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description }}" />
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<meta property="og:site_name" content="Varun M" />
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Varun M · Engineer{% endif %}" />
 <meta property="og:description" content="{{ page.description | default: site.description }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:image" content="{{ '/assets/img/og.png' | absolute_url }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{% if page.layout == 'post' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+{% endif %}<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@varunzxzx" />
+<meta name="twitter:creator" content="@varunzxzx" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}Varun M · Engineer{% endif %}" />
+<meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+<meta name="twitter:image" content="{{ '/assets/img/og.png' | absolute_url }}" />
 <meta name="theme-color" content="#141210" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32.png' | relative_url }}" />
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/favicon-192.png' | relative_url }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}" />
+<link rel="alternate" type="application/atom+xml" title="Varun M · Writing" href="{{ '/feed.xml' | relative_url }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo:wdth,wght@125,700..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
